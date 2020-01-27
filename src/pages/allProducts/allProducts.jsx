@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Spinner from '../../components/spinner/spinner';
+import Modal from '../../components/modal/modal';
 import Product from '../../components/product/product';
 import axios from '../../services/Api';
 import './allProducts.styles.scss';
@@ -8,25 +10,29 @@ class AllProducts extends Component {
     super();
 
     this.state = {
-      products: []
+      products: [],
+      modal: false
     };
   }
 
   async componentDidMount() {
     try {
+      this.setState({ modal: true })
       const response = await axios.getProducts();
+      this.setState({ modal: false })
       this.setState({ products: response.data.data });
     } catch (error) {
+      this.setState({ modal: false })
       console.log(error.response);
     }
   }
 
-  showProductPage = (id) => {
-    this.props.history.push(`/${id}/show`)
-  }
+  showProductPage = id => {
+    this.props.history.push(`/${id}/show`);
+  };
 
   render() {
-    const { products } = this.state;
+    const { products, modal } = this.state;
     const showProducts = products.length
       ? products.map(product => (
           <Product
@@ -38,7 +44,17 @@ class AllProducts extends Component {
           />
         ))
       : null;
-    return <div className="allProducts">{showProducts}</div>;
+    const showModal = modal ? (
+      <Modal>
+        <Spinner />
+      </Modal>
+    ) : null;
+    return (
+      <Fragment>
+        {showModal}
+        <div className="allProducts">{showProducts}</div>
+      </Fragment>
+    );
   }
 }
 

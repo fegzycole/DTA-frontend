@@ -7,6 +7,7 @@ const FormInput = ({ handleChange, size, ...otherProps }) => (
       className={`formInput ${size}`}
       onChange={handleChange}
       {...otherProps}
+      required
     />
   </Fragment>
 );

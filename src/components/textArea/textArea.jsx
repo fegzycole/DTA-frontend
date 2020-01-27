@@ -8,6 +8,7 @@ const TextArea = ({ name, handleChange, placeholder }) => (
       name={name}
       placeholder= {placeholder}
       onChange={handleChange}
+      required
     />
   </Fragment>
 );
