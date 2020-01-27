@@ -1,0 +1,35 @@
+.product {
+  background: white;
+  .product-head {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .product-body {
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .product-footer {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    .view {
+      padding: 3px;
+      background: #f2f2f2;
+      color: rgb(46, 44, 44);
+      font-size: 13px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

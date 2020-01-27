@@ -4,10 +4,10 @@ export default {
   addProduct (credentials) {
     return axios().post('/products', credentials)
   },
-  login (credentials) {
-    return axios().post('/auth/signin', credentials)
+  getProducts () {
+    return axios().get('/products/all')
   },
-  getUserAccounts(token) {
-    return axios().get(`/accounts/${sessionStorage.getItem('id')}/all`, token)
+  getAProduct(id) {
+    return axios().get(`/products/${id}/show`)
   }
 }

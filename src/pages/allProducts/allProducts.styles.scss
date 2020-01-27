@@ -1,0 +1,9 @@
+.allProducts {
+  width: 90%;
+  margin: 0 auto;
+  padding: 130px;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}

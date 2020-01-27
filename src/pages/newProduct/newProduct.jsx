@@ -33,8 +33,8 @@ class NewProduct extends Component {
       fd.append('price', price);
       fd.append('name', name);
       fd.append('color', color);
-      const id = await Api.addProduct(fd);
-      console.log(id);
+      const response = await Api.addProduct(fd);
+      this.props.history.push(`/${response.data.data}/show`);
     } catch (error) {
       console.log(error.response);
     }
