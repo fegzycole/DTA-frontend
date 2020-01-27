@@ -1,68 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+<br />
+<p align="center">
+ 
+  <h3 align="center">Associations</h3>
+  <p align="center">
+    Ven10 Developer Assessment
+    <a href="https://github.com/fegzycole/DTA-frontend/issues">Report Bug</a>
+    <a href="https://github.com/fegzycole/DTA-frontend/issues">Request Feature</a>
+  </p>
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+* [Use](#use)
+* [Roadmap](#roadmap)
+* [Contact](#contact)
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Frontend Implementation With ReactJS
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[Live Version](https://cryptic-ridge-38758.herokuapp.com/addproduct)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend Implementation With NodeJS
 
-### `yarn build`
+[Live Version](https://arcane-beach-16254.herokuapp.com/)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Project Specifications
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- An API which lists all products showing some of their properties
+  - ID
+  - Name
+  - Price
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was built with Node.js
 
-### Code Splitting
+## Prerequisites
+ - Git
+ - Yarn
+ - Node.js
+ - NPM
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+## Getting Started
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- git clone https://github.com/fegzycole/Private-Events.git
 
-### Making a Progressive Web App
+- cd Private-Events
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- rails db:migrate (to add tables and columns)
 
-### Advanced Configuration
+- rails server to fire the rails server
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+<!-- ROADMAP -->
+## Roadmap
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+See the [open issues](https://github.com/fegzycole/Private-Events/issues) for a list of proposed features (and known issues).
 
-### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Ferguson Iyara - [Github profile](https://github.com/fegzycole)
+
+Project Link: [Project repo](https://github.com/fegzycole/Private-Events/)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/badge/Contributors-2-%2300ff00
+[contributors-url]: https://github.com/fegzycole/Private-Events/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
+[issues-url]: https://github.com/fegzycole/Private-Events/issues/
