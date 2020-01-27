@@ -4,6 +4,7 @@ import FormInput from '../../components/formInput/formInput';
 import TextArea from '../../components/textArea/textArea';
 import FileInput from '../../components/fileinput/flleInput';
 import Button from '../../components/button/button';
+import Api from '../../services/Api';
 import './newProduct.styles.scss';
 
 class NewProduct extends Component {
@@ -16,11 +17,28 @@ class NewProduct extends Component {
       price: '',
       category: '',
       image: '',
+      imageUrl: '',
       color: ''
     };
   }
 
-  handleSubmit = async () => {};
+  handleSubmit = async e => {
+    const { name, description, color, category, image, price } = this.state;
+    e.preventDefault();
+    try {
+      const fd = new FormData();
+      fd.append('image', image, image.name);
+      fd.append('description', description);
+      fd.append('category', category);
+      fd.append('price', price);
+      fd.append('name', name);
+      fd.append('color', color);
+      const id = await Api.addProduct(fd);
+      console.log(id);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
 
   handleChange = e => {
     const { value, name } = e.target;
@@ -31,22 +49,33 @@ class NewProduct extends Component {
 
   handleFileChange = e => {
     const current = e.target.files[0];
-    const reader = new FileReader()
-    reader.addEventListener('load', () => {
-      this.setState({ image: reader.result })
-    }, false);
+    const reader = new FileReader();
+    reader.addEventListener(
+      'load',
+      () => {
+        this.setState({
+          imageUrl: reader.result,
+          image: current
+        });
+      },
+      false
+    );
 
-    reader.readAsDataURL(current)
-  }
+    reader.readAsDataURL(current);
+  };
 
   render() {
     return (
       <div className="newProduct">
         <div className="image-section">
-          <ImagePreview imageUrl={this.state.image} alt={this.state.name} />
-          <FileInput type="file" name="image" handleChange={this.handleFileChange}/>
+          <ImagePreview imageUrl={this.state.imageUrl} alt={this.state.name} />
+          <FileInput
+            type="file"
+            name="image"
+            handleChange={this.handleFileChange}
+          />
         </div>
-        
+
         <div className="formContainer">
           <form onSubmit={this.handleSubmit}>
             <FormInput
@@ -64,7 +93,7 @@ class NewProduct extends Component {
             <div className="flex-items">
               <FormInput
                 handleChange={this.handleChange}
-                name="category"
+                name="color"
                 type="text"
                 placeholder="Color"
                 size="small"
@@ -83,7 +112,7 @@ class NewProduct extends Component {
               placeholder="Description"
             />
 
-            <Button type='submit'>Add Product</Button>
+            <Button type="submit">Add Product</Button>
           </form>
         </div>
       </div>
