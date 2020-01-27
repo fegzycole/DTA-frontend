@@ -1,22 +1,9 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Issues][issues-shield]][issues-url]
-<br />
 <p align="center">
- 
-  <h3 align="center">Associations</h3>
-  <p align="center">
-    Ven10 Developer Assessment
-    <a href="https://github.com/fegzycole/DTA-frontend/issues">Report Bug</a>
-    <a href="https://github.com/fegzycole/DTA-frontend/issues">Request Feature</a>
-  </p>
+  Ven10 Developer Assessment
+  <a href="https://github.com/fegzycole/DTA-frontend/issues">Report Bug</a>
+  <a href="https://github.com/fegzycole/DTA-frontend/issues">Request Feature</a>
 </p>
 
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-* [Use](#use)
-* [Roadmap](#roadmap)
-* [Contact](#contact)
 
 
 ### Frontend Implementation With ReactJS
@@ -36,10 +23,26 @@
   - Name
   - Price
 
+![](files/getAllEndpoint.png)
 
+- A Detail API which shows all the properties of a specific product
+  - ID
+  - Name
+  - Description
+  - Price
+  - Category
+  - Image
+  - Color
 
+![](files/OneProduct.png)
 
+- A webpage which allows you to add a new product 
 
+![](files/CreateProduct.png)
+
+- Show the user a preview page of the product they just added
+
+![](files/ProductPreview.png)
 
 
 ### Built With
@@ -55,28 +58,10 @@ This project was built with Node.js
 
 ## Getting Started
 
-- git clone https://github.com/fegzycole/Private-Events.git
+- git clone https://github.com/fegzycole/DTA-frontend.git
 
-- cd Private-Events
+- cd DTA-frontend
 
-- rails db:migrate (to add tables and columns)
+- npm install
 
-- rails server to fire the rails server
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/fegzycole/Private-Events/issues) for a list of proposed features (and known issues).
-
-
-Ferguson Iyara - [Github profile](https://github.com/fegzycole)
-
-Project Link: [Project repo](https://github.com/fegzycole/Private-Events/)
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/badge/Contributors-2-%2300ff00
-[contributors-url]: https://github.com/fegzycole/Private-Events/graphs/contributors
-[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
-[issues-url]: https://github.com/fegzycole/Private-Events/issues/
+- npm start
