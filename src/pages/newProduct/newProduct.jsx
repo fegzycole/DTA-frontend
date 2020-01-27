@@ -6,6 +6,7 @@ import FileInput from '../../components/fileinput/flleInput';
 import Button from '../../components/button/button';
 import Spinner from '../../components/spinner/spinner';
 import Modal from '../../components/modal/modal';
+import Errors from '../../components/errors/errors';
 import Api from '../../services/Api';
 import './newProduct.styles.scss';
 
@@ -21,7 +22,8 @@ class NewProduct extends Component {
       image: '',
       imageUrl: '',
       color: '',
-      modal: false
+      modal: false,
+      errors: []
     };
   }
 
@@ -40,6 +42,18 @@ class NewProduct extends Component {
     return fd;
   };
 
+  generateErrors = errors => {
+    if (typeof errors === 'object') {
+      Object.values(errors).forEach(error => {
+        error.forEach(err => {
+          this.setState({ errors: this.state.errors.concat(err) });
+        });
+      });
+    } else {
+      this.setState({ errors: this.state.errors.concat(errors) });
+    }
+  };
+
   handleSubmit = async e => {
     e.preventDefault();
     try {
@@ -55,7 +69,7 @@ class NewProduct extends Component {
     } catch (err) {
       this.setState({ modal: false });
       const errors = err.response.data.errors;
-      console.log(errors);
+      this.generateErrors(errors);
     }
   };
 
@@ -149,6 +163,7 @@ class NewProduct extends Component {
             </form>
           </div>
         </div>
+        <Errors errors={this.state.errors}/>
       </Fragment>
     );
   }
