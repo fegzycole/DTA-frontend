@@ -1,14 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import './formInput.styles.scss';
 
-const FormInput = ({ handleChange, ...otherProps }) => (
-  <div className="group">
+const FormInput = ({ handleChange, size, ...otherProps }) => (
+  <Fragment>
     <input
-      className="formInput"
+      className={`formInput ${size}`}
       onChange={handleChange}
       {...otherProps}
     />
-  </div>
+  </Fragment>
 );
 
 export default FormInput;
