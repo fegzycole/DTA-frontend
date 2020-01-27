@@ -1,14 +1,12 @@
 <p align="center">
   Ven10 Developer Assessment
-  <a href="https://github.com/fegzycole/DTA-frontend/issues">Report Bug</a>
-  <a href="https://github.com/fegzycole/DTA-frontend/issues">Request Feature</a>
 </p>
 
 
 
 ### Frontend Implementation With ReactJS
 
-[Live Version](https://cryptic-ridge-38758.herokuapp.com/addproduct)
+[Live Version](https://cryptic-ridge-38758.herokuapp.com/)
 
 
 ### Backend Implementation With NodeJS
